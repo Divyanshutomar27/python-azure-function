@@ -5,8 +5,8 @@ from azure.keyvault.secrets import SecretClient
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
         # Replace with your Key Vault URL
-        key_vault_url = "https://<YourKeyVaultName>.vault.azure.net/"
-        secret_name = "YourSecretName"
+        key_vault_url = "https://test-az-function.vault.azure.net/"
+        secret_name = "key1"
         
         # Authenticate using Managed Identity
         credential = DefaultAzureCredential()
