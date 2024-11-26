@@ -7,8 +7,8 @@ from azure.keyvault.secrets import SecretClient
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
         # Key Vault URL and Secret Name
-        key_vault_url = os.getenv("KEY_VAULT_URL")  # Set in Function App Application Settings
-        secret_name = os.getenv("SECRET_NAME")     # Set in Function App Application Settings
+        key_vault_url = os.getenv("https://test-az-function.vault.azure.net/")  # Set in Function App Application Settings
+        secret_name = os.getenv("key1")     # Set in Function App Application Settings
         
         if not key_vault_url or not secret_name:
             return func.HttpResponse(
